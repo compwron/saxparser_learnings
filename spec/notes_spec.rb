@@ -1,13 +1,13 @@
 require "spec_helper"
 
-describe Parser do
+describe File do
   describe "self.parse" do
     it "parses" do
       xml = File.read(
         File.expand_path("../sample.xml", __FILE__)
       )
 
-      file = Parser.parse(xml)
+      file = File.parse(xml)
       # TODO fix .should to expects().to
       file.notes.count.should == 1
 
